@@ -2,8 +2,8 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>colav_risk_assessment</name>
-  <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <version>0.0.1</version>
+  <description>colav_risk_assessment produces real time unsafe_set polyshapes publishing them to correlating nodes based on agent config and obstacles config at that time</description>
   <maintainer email="r.mckee@qub.ac.uk">Ryan McKee</maintainer>
   <license>MIT</license>
 
@@ -14,6 +14,9 @@
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>
   <test_depend>python3-pytest</test_depend>
+
+  <!--External dependencies-->
+  <exec_depend>unsafe_set_gen</exec_depend>
 
   <export>
     <build_type>ament_python</build_type>

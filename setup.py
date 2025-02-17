@@ -1,4 +1,6 @@
 from setuptools import find_packages, setup
+import os
+from glob import glob
 
 package_name = 'colav_risk_assessment'
 
@@ -10,16 +12,23 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name + '/launch', glob('launch/*.launch.py')),
     ],
-    install_requires=['setuptools'],
+    install_requires=['setuptools',
+                      'unsafe_set_gen'],
     zip_safe=True,
-    maintainer='3507145@eeecs.qub.ac.uk',
+    maintainer='Ryan McKee',
     maintainer_email='r.mckee@qub.ac.uk',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    description=( 
+        'COLAV risk assesment provides a number of different nodes for the ' 
+        'colav system producing and listening to data related to risk assesment '
+        ' for motion planning'
+    ),
+    license='MIT',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'unsafe_set_generator_node = colav_risk_assessment.execute_colav_risk_assesment:main'
         ],
     },
 )
