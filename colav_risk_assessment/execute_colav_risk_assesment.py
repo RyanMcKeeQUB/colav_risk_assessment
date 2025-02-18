@@ -1,5 +1,5 @@
 import rclpy
-from scripts.unsafe_set_generator_node import UnsafeSetGeneratorNode
+from colav_risk_assessment.scripts.unsafe_set_generator_node import UnsafeSetGeneratorNode
 
 def main(args = None):
     rclpy.init()
