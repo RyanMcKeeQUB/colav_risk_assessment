@@ -1,7 +1,7 @@
 import rclpy
 from rclpy.node import Node
-from unsafe_set_gen.unsafe_set import create_unsafe_set_polyshape
-from unsafe_set_gen.objects import DynamicObject, DynamicObstacle, Configuration
+from colav_unsafe_set_gen.unsafe_set import create_unsafe_set_polyshape
+from colav_unsafe_set_gen.objects import DynamicObject, DynamicObstacle, Configuration
 from colav_interfaces.msg import AgentConfig, ObstaclesConfig, UnsafeSet
 from message_filters import ApproximateTimeSynchronizer, Subscriber
 from std_msgs.msg import Header
